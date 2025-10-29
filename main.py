@@ -17,15 +17,16 @@ def main():
         for event in pygame.event.get():
             if event.type == pygame.QUIT:
                 return
-
+        
         screen.fill("black")
+        player.update(dt)
         player.draw(screen)
         pygame.display.flip()
         
 
 
 
-        nclock.tick(60)
+        dt = nclock.tick(60) /1000
     
 
 
