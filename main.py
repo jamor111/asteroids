@@ -45,7 +45,7 @@ def main():
             for bullet in shots:
                 if bullet.collision(aster):
                     bullet.kill()
-                    aster.kill()
+                    aster.split()
         for draws in drawable:
             draws.draw(screen)
         pygame.display.flip()
